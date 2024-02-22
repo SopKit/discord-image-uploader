@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             const responseData = await response.json();
           console.log(responseData)
-            responseDiv.textContent = `File uploaded successfully. URL: <i>${responseData.attachments[0].url}</i>`;
+            responseDiv.innerHTML = `File uploaded successfully. URL: <i>${responseData.attachments[0].url}</i>`;
             uploadedImage.src = responseData.attachments[0].url;
         } catch (error) {
             console.error('Error uploading image:', error);
